@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .navbar ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* background-color: #212121; */
+        background-color: #4A90E2; /* Vibrant blue color */
+    color: white; 
+        border-radius: 7px;
+      }
+      .navbar ul li {
+        list-style: none;
+        padding: 13px;
+      }
+      .navbar ul li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 500;
+        color: white;
+      }
+      button {
+        padding: 4px 15px 4px 15px;
+        color: white;
+        background-color: grey;
+        border-radius: 7px;
+        font-size: 17px;
+      }
+      .navbar ul li input {
+        padding: 5px;
+        width: 28vw;
+        font-size: 1rem;
+        border-radius: 10px 0px 0px 10px;
+        border: none;
+        outline: none;
+      }
+      .heading1 {
+        text-align: center;
+        margin: 12px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: grey;
+      }
+      section .card1 {
+        height: 200px;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid #dadada;
+      }
+      .c1 {
+        border: 1px solid black;
+        width: 25%;
+        height: 100%;
+        border-radius: 8px;
+        margin: 8px;
+      }
+      iframe {
+        border-radius: 8px;
+      }
+      .c2 {
+        border: 1px solid black;
+        width: 25%;
+        height: 100%;
+        border-radius: 8px;
+        margin: 8px;
+      }
+      .c3 {
+        border: 1px solid black;
+        width: 25%;
+        height: 100%;
+        border-radius: 8px;
+        margin: 8px;
+      }
+      .c4 {
+        border: 1px solid black;
+        width: 25%;
+        height: 100%;
+        border-radius: 8px;
+        margin: 8px;
+      }
+      footer {
+        padding: 10px;
+        font-size: 1rem;
+        background-color: #333333; /* Dark gray color */
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.5px solid white;
+      }
+      ul #icon {
+        position: relative;
+        right: 50px;
+        background-color: white;
+        color: black;
+        /* font-size:2rem; */
+        padding: 6px;
+        padding-left: 15px;
+        padding-right: 12px;
+        border-radius: 0px 10px 10px 0px;
+        text-align: center;
+      }
+
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+      .dropdown .dropbtn {
+        font-size:1rem;
+        text-transform: uppercase;
+        font-weight:500;
+        border: none;
+        outline: none;
+        color: #f2f2f2;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      
+
+      .welcome-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f8ff; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px auto; /* Center the container */
+    max-width: 800px; /* Max width for larger screens */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.welcome-container h1 {
+    font-size: 2.5em; /* Slightly larger heading */
+    color: #2c3e50; /* Darker text color */
+}
+
+.scrolling-text {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scroll-text 30s linear infinite; /* Slow scrolling animation */
+}
+
+@keyframes scroll-text {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.scrolling-text p {
+    display: inline-block; /* Keep text inline */
+    font-size: 1.2em; /* Slightly larger text */
+    color: #34495e; /* A contrasting text color */
+}
+
+
+
+    
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navbar">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="contactus.html">contact us</a></li>
+            <li><input type="text" placeholder="Search your Course Here" /></li>
+            <i id="icon" class="fa-solid fa-magnifying-glass"></i>
+          
+            <li><a href="https://chatgpt.com/c/671160bb-0154-800c-9b24-388e5b9afc16">chatgpt</a></li>
+
+            <div class="dropdown">
+              <button class="dropbtn">Study Resources &#9662;</button>
+              <div class="dropdown-content">
+                <a href="websites.html">Websites</a>
+                <a href="notes.html">Notes</a>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="welcome-container">
+          <h1>Welcome to Kartik's Learning Hub</h1>
+          <div class="scrolling-text">
+              <p>Hello! I'm Kartik Sonar, an MCA student and a passionate learner. Explore my favorite study resources coding tutorials, and funtastic courses to enhance your skills. Let's learn together!</p>
+          </div>
+      </div>
+      
+      
+      
+      
+        <div class="card1">
+          <div class="c1">
+            <iframe
+              height="100%"
+              width="100%"
+              src="https://www.youtube.com/embed/0IAPZzGSbME?si=mndbdAwajViSNapu"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="c2">
+            <iframe
+              height="100%"
+              width="100%"
+              src="https://www.youtube.com/embed/OQCjakjCJu4?si=ifP-qmOajYSz_fq2"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="c3">
+            <iframe
+              height="100%"
+              width="100%"
+              src="https://www.youtube.com/embed/-9MgzfQi-mQ?si=YEIsbzLDKlwUbFoW"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="c4">
+            <iframe
+              height="100%"
+              width="100%"
+              src="https://www.youtube.com/embed/L4_jarMnB0c?si=RkzcHpAnZyjOHWd2"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1 class="heading1">Welcome to the most valuable cources for free!</h1>
+        <div class="card1">
+          <div class="c1">
+            <iframe
+              height="100%"
+              width="100%"
+              src="https://www.youtube.com/embed/mrzAOer7GxU?si=bMf4hWM_0fe2PDtt"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="c2">
+            <iframe
+              height="100%"
+              width="100%"
+              src="https://www.youtube.com/embed/rIzUe-Bb1c8?si=Si6rPetI7z2_hlrz"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="c3">
+            <iframe
+              height="100%"
+              width="100%"
+              src="https://www.youtube.com/embed/oPjZK4Apgug?si=rWDSPT8zZUosSmcQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="c4">
+            <iframe
+              height="100%"
+              width="100%"
+              src="https://www.youtube.com/embed/RwrA6Y7Bvf0?si=_1l_3fmmcr1Ixrq9"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1 class="heading1">Welcome to the most valuable cources for free!</h1>
+        <div class="card1">
+          <div class="c1">
+            <iframe
+              height="100%"
+              width="100%"
+              src="https://www.youtube.com/embed/Z4-dXwnw7W8?si=RUuGPb5aSfvD9XFR"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="c2">
+            <iframe
+              height="100%"
+              width="100%"
+              src="https://www.youtube.com/embed/u64gyCdqawU?si=O5b21oFx4m7-6ZlL"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="c3">
+            <iframe
+              height="100%"
+              width="100%"
+              src="https://www.youtube.com/embed/LvC68w9JS4Y?si=WqDC55VvuwgDOmH8"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="c4">
+            <iframe
+              height="100%"
+              width="100%"
+              src="https://www.youtube.com/embed/_31XdRjJ4pM?si=_MJh4hVagjF6dlFu"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>&copy; 2024 Kartik Sonar. All Rights Reserved.</footer>
+  </body>
+</html>
